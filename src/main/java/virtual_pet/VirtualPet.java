@@ -31,21 +31,21 @@ public class VirtualPet {
     }
 
     public void showStatus() {
-        System.out.println("Im" + getName() + "Im" + getHungerLevel() +
-                "Im" + getThirstLevel() + getBoredomLevel());
+        System.out.println("Im " + getName() + " Hunger " + getHungerLevel() +
+                " thirst " + getThirstLevel()+" boredom " + getBoredomLevel());
 
     }
 
     public void feed() {
-        hungerLevel = 0;
+        hungerLevel -= 4;
     }
 
-    public void watered() {
-        thirstLevel = 0;
+    public void water() {
+        thirstLevel -= 3;
     }
 
-    public void played() {
-        boredomLevel = 0;
+    public void play() {
+        boredomLevel -= 2;
     }
 
     public void tick() {

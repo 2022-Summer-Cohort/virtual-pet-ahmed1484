@@ -11,24 +11,33 @@ public class VirtualPetApplication {
 
     public static void main(String[] args) {
         //Interact with a virtual_Pet.VirtualPet object in this method
-        VirtualPet john = new VirtualPet("Journey", 6, 6, 6);
+        VirtualPetShelter dogs = new VirtualPetShelter();
         Scanner input = new Scanner(System.in);
-        while (John.isAlive()) ;
+        String userChoice = "";
+        while (!userChoice.equalsIgnoreCase("quit"))
         {
-            john.showStatus();
+            dogs.showStatuses();
             System.out.println("hit selection:feed| play| water| quit");
-            String userChoice = input.nextLine();
+            userChoice = input.nextLine();
             switch (userChoice.toLowerCase()) {
                 case "feed":
-                    john.feed();
+                    dogs.feedAll();
                     break;
                 case "water":
-                    john.watered();
+                    dogs.waterAll();
                     break;
                 case "play":
-                    john.played();
+                    dogs.playAll();
                     break;
+                case "quit":
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("invalid choice");
             }
+            dogs.tickAll();
+
+
         }
     }
 }
