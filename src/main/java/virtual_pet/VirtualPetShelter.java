@@ -7,9 +7,10 @@ public class VirtualPetShelter {
 
     public VirtualPetShelter() {
         shelter = new ArrayList<>();
-        shelter.add(new VirtualPet("Ahmed", 6, 1, 5));
-        shelter.add(new VirtualPet("zack", 4, 2, 3));
-        shelter.add(new VirtualPet("mike", 7, 5, 2));
+        shelter.add(new RoboticDog("Ahmed", 6, 1, 5,10,10));
+        shelter.add(new RoboticCat("zack", 4, 2, 3,10,10));
+        shelter.add(new OrganicDog("mike", 7, 5, 2,10));
+        shelter.add(new OrganicDog("moe", 7, 5, 2,10));
 
     }
 
@@ -52,6 +53,7 @@ public class VirtualPetShelter {
 
     }
 
+
     public VirtualPet findByPetName(String name) {
         for (VirtualPet pet : shelter) {
             if (pet.getName().equalsIgnoreCase(name)) {
@@ -69,5 +71,36 @@ public class VirtualPetShelter {
         for (VirtualPet pet : shelter) {
             pet.tick();
         }
+    }
+
+    public void walk() {
+        for (VirtualPet pet : shelter) {
+            if (pet instanceof Walking) {
+                ((Walking) pet).walking();
+            }
+
+
+        }
+
+    }
+
+    public void oilRobots() {
+        for (VirtualPet pet : shelter) {
+            if (pet instanceof RoboticPet) {
+                ((RoboticPet) pet).oilRobots();
+            }
+        }
+
+
+    }
+
+    public void maintainRobot() {
+        for (VirtualPet pet : shelter) {
+            if (pet instanceof RoboticPet) {
+                ((RoboticPet) pet).maintainRobots();
+            }
+        }
+
+
     }
 }

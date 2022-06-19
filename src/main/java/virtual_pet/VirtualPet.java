@@ -1,6 +1,7 @@
 package virtual_pet;
 
 public class VirtualPet {
+    public Object maintainRobot;
     private String name;
     private int hungerLevel;
     private int thirstLevel;
@@ -59,5 +60,11 @@ public class VirtualPet {
             return false;
         }
         return true;
+    }
+
+    public void CleanCage() {
+    }
+
+    public void oilRobots() {
     }
 }

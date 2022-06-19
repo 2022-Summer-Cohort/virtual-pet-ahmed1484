@@ -11,6 +11,7 @@ public class VirtualPetApplication {
 
     public static void main(String[] args) {
         //Interact with a virtual_Pet.VirtualPet object in this method
+        VirtualPet Ahmed = new RoboticCat( " Ahmed", 9,9, 9, 9,9);
         VirtualPetShelter dogs = new VirtualPetShelter();
         Scanner input = new Scanner(System.in);
         String userChoice = "";
@@ -32,12 +33,24 @@ public class VirtualPetApplication {
                 case "quit":
                     System.exit(0);
                     break;
-                default:
-                    System.out.println("invalid choice");
+                case "walk":
+                    OrganicDog shelter = null;
+                    shelter.walk();
+                    break;
+                case "clean Cage":
+                    shelter.CleanCage();
+                    break;
+                case "clean litter box":
+                    shelter.CleanLitterBox();
+                    break;
+                case "oil robots":
+                    shelter.oilRobots();
+                    break;
+                case "maintain robotic":
+                    shelter.maintainRobot();
+                    break;
             }
-            dogs.tickAll();
-
-
         }
     }
 }
+
