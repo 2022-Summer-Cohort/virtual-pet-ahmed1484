@@ -1,6 +1,6 @@
 package virtual_pet;
 
-public class OrganicDog extends OrganicPet implements Walking{
+public class OrganicDog extends OrganicPet implements Walk{
 
     public OrganicDog(String name, int hungerLevel, int boredomLevel, int thirstLevel, int cleanlinessLevel) {
         super(name, hungerLevel, boredomLevel, thirstLevel, cleanlinessLevel);
@@ -12,14 +12,18 @@ public class OrganicDog extends OrganicPet implements Walking{
         boredomLevel--;
         cleanlinessLevel++;
     }
+
+
+
+
+
     @Override
     public void showStatus() {
-        System.out.println("my name" + getName() + "hungerLevel" + "boredomLevel" + "thirst" + "thirstLevel" + "cleanliness" + "cleanlinessLevel");
+        System.out.println("organicDog " + getName() + " hunger "+ getHungerLevel() + " boredom "+getBoredomLevel() + " thirst " + getThirstLevel() + " cleanliness " + getCleanlinessLevel());
     }
 
-    @Override
-    public void walking() {
+
 
     }
 
-}
+

@@ -11,10 +11,13 @@ public class OrganicPet extends VirtualPet {
     public int getCleanlinessLevel() {
         return cleanlinessLevel;
     }
-public void cleanCage(){
-        cleanCage();
-}
-public void CleanLitterBox(){
-        CleanLitterBox();
-}
+
+    public void cleanCage() {
+        cleanlinessLevel -= 5;
+    }
+
+    public void CleanLitterBox() {
+        cleanlinessLevel = 0;
+
+    }
 }

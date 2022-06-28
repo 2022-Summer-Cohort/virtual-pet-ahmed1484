@@ -6,6 +6,6 @@ public class OrganicCat extends OrganicPet {
     }
     @Override
     public void showStatus() {
-        System.out.println("my name" +getName() + "hunger" + "hungerLevel" + "boredom" + "boredomLevel" + "thirst" + "thirstLevel" + "my litterbox is" + cleanlinessLevel);
+        System.out.println("organic Cat " +getName() + " hunger " +getHungerLevel() + " boredom " + getBoredomLevel() + " thirst " + getThirstLevel() + " my litterbox is " + cleanlinessLevel);
     }
 }
